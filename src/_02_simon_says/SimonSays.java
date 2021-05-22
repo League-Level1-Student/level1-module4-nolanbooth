@@ -30,7 +30,7 @@ public class SimonSays extends KeyAdapter {
 
 	// Complete steps 1 - 7 before you test
 	// 1. Declare a JFrame variable
-
+JFrame frame = new JFrame();
 	public void run() {
 		// 2. Add the four images that match keyboard keys like this:
 		// images.put(KeyEvent.VK_UP, "up.jpg");
