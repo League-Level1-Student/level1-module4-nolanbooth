@@ -16,7 +16,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.net.URL;
-
+//hello my name is Nolan
 
 import javax.swing.BoxLayout;
 import javax.swing.Icon;
@@ -49,20 +49,28 @@ public class Jeopardy implements ActionListener {
 		quizPanel = new JPanel();
 		frame.setLayout(new BorderLayout());
 
+		
+		//speak("hello. Welcome to J e o p a r d y, or Jeopardy!");
 		// 1. Make the frame show up
-
+frame.setVisible(true);
 		// 2. Give your frame a title
-
+frame.setTitle("J   e   o   p   a   r   d   y");
 		// 3. Create a JPanel variable to hold the header using the createHeader method
+JPanel header = createHeader("Airplanes");
 
 		// 4. Add the header component to the quizPanel
-
+quizPanel.add(header);
 		// 5. Add the quizPanel to the frame
-
+frame.add(quizPanel);
 		// 6. Use the createButton method to set the value of firstButton
-
 		// 7. Add the firstButton to the quizPanel
+JButton firstButton = createButton("This is a button");
 
+firstButton.addActionListener(this);
+
+
+
+frame.add(firstButton);
 		// 8. Write the code to complete the createButton() method below. Check that your
 		// game looks like Figure 1 in the Jeopardy Handout - http://bit.ly/1bvnvd4.
 
@@ -93,21 +101,21 @@ public class Jeopardy implements ActionListener {
 	private JButton createButton(String dollarAmount) {
 		
 		// Create a new JButton
-
+JButton button = new JButton();
 		// Set the text of the button to the dollarAmount
-
+button.setText(dollarAmount);
 		// Increment the buttonCount (this should make the layout vertical)
-
+buttonCount++;
 		// Return your new button instead of the temporary button
 
-		return new JButton("temporary button");
+		return button;
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		
 		// Remove this temporary message after testing:
-		JOptionPane.showMessageDialog(null, "pressed " + ((JButton) e.getSource()).getText() + " button");
-
+		//JOptionPane.showMessageDialog(null, "pressed " + ((JButton) e.getSource()).getText() + " button");
+speak("My name is nolan bewth");
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
 
@@ -195,5 +203,27 @@ public class Jeopardy implements ActionListener {
 		frame.add(image);
 		frame.setVisible(true);
 		frame.pack();
+	
+}
+static void speak(String words) {
+		
+		if (System.getProperty("os.name").contains("Windows")) {
+			String cmd = "PowerShell -Command \"Add-Type -AssemblyName System.Speech; (New-Object System.Speech.Synthesis.SpeechSynthesizer).Speak('"
+					+ words + "');\"";
+			try {
+				Runtime.getRuntime().exec(cmd).waitFor();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		} else {
+			try {
+				Runtime.getRuntime().exec("say " + words).waitFor();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
 	}
+	
+	
+	
 }
