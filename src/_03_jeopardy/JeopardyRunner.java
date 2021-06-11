@@ -2,7 +2,7 @@ package _03_jeopardy;
 
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
- *    Level 1
+ *    LeveL
  */
 
 
@@ -11,3 +11,4 @@ public class JeopardyRunner {
 		new Jeopardy().run();
 	}
 }
+        
