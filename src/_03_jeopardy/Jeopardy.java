@@ -62,10 +62,11 @@ JPanel header = createHeader("A I R P L A N E S");
 // 5. Add the quizPanel to the frame
 
 		// 6. Use the createButton method to set the value of firstButton
-	JButton firstButton = createButton("500");
+	 firstButton = createButton("500");
 		// 7. Add the firstButton to the quizPanel
 quizPanel.add(firstButton);
-
+thirdButton = createButton("1000");
+quizPanel.add(thirdButton);
 
 
 		// 8. Write the code to complete the createButton() method below. Check that your
@@ -74,7 +75,7 @@ quizPanel.add(firstButton);
 //yes
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
-		JButton secondButton = createButton("400");
+		 secondButton = createButton("400");
 // 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
@@ -84,8 +85,7 @@ quizPanel.add(firstButton);
 		// 12. Write the code to complete the actionPerformed() method below
 //FINALLY DONE
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
-		JButton thirdButton = createButton("1000");
-		 quizPanel.add(thirdButton);
+		 
 		
 		
 		/*
@@ -156,11 +156,13 @@ secondButton.setText("");
 		// Remove this temporary message and replace it with a pop-up that asks the user the question
 	String answer =	JOptionPane.showInputDialog(null, question);
 		// Stop the theme music when they have entered their response. Hint: use the sound variable 
-		if(answer.equalsIgnoreCase(correctAnswer)) {
+		
+	if(answer.equalsIgnoreCase(correctAnswer)) {
 		// If the answer is correct
 
 			// Increase the score by the prizeMoney
 score = score+prizeMoney;
+System.out.println(score);
 			// Pop up a message to tell the user they were correct
 		JOptionPane.showMessageDialog(null, "You were correct");
 		}else {
@@ -170,9 +172,11 @@ score = score+prizeMoney;
 score = score - prizeMoney;
 			// Pop up a message to tell the user they were wrong and give them the correct answer
 		JOptionPane.showMessageDialog(null, "You were wrong, the correct answer is X-15");
+		
+		
 		}
 		// Call the updateScore() method
-		
+		updateScore();
 	}
 	public void playJeopardyTheme() {
 		try {
