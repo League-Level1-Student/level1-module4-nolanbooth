@@ -1,4 +1,4 @@
-package _05_typing_tutor;
+package _05_typing_tutor_DONE;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -18,6 +18,7 @@ public class TypingTutor implements KeyListener {
 	JFrame frame = new JFrame();
 	char currentLetter;
 	JLabel label = new JLabel();
+	int score = 0;
 	
 	public void run() {
 frame.setVisible(true);
@@ -44,10 +45,12 @@ frame.setVisible(true);
 		if(keyPressed == currentLetter) {
 			System.out.println("You got it correct");
 		panel.setBackground(Color.green);
-		
+		score++;
 		}else {
 			System.out.println("bad");
 		panel.setBackground(Color.red);
+		JOptionPane.showMessageDialog(null, "You got "+score+" letters correct!");
+	score = 0;
 		}
 	}
 	@Override
@@ -61,6 +64,9 @@ frame.setVisible(true);
 		label.setText(currentLetter + "");
 		
 	}
+	
+	
+	
 	Date timeAtStart = new Date();
     
 	private void showTypingSpeed(int numberOfCorrectCharactersTyped) {

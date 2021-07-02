@@ -1,4 +1,4 @@
-package _03_jeopardy;
+package _03_jeopardy_DONE;
 
 
 /*

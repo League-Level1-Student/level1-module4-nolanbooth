@@ -1,4 +1,4 @@
-package _05_typing_tutor;
+package _05_typing_tutor_DONE;
 
 import java.util.Random;
 

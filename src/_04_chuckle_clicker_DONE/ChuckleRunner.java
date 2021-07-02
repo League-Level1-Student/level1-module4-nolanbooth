@@ -1,4 +1,4 @@
-package _04_chuckle_clicker;
+package _04_chuckle_clicker_DONE;
 
 public class ChuckleRunner {
 
