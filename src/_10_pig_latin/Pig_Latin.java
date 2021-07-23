@@ -10,7 +10,6 @@ public class Pig_Latin implements ActionListener {
 	PigLatinTranslator translator = new PigLatinTranslator();
 	
 	
-	
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JButton button = new JButton();

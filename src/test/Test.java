@@ -7,11 +7,12 @@ public class Test {
 public static void main(String[] args) {
 	int numbercount = 0;
 	for (int i = 0; i < 1000;i++) {
-		int random = new Random().nextInt(27);
+		int random = new Random().nextInt(3);
+		
 		if  (random == 1) {
-			System.out.print("a");
+			System.out.print("0");
 		}if (random == 2){
-			System.out.print("b");
+			System.out.print("1");
 		}if  (random == 3) {
 			System.out.print("c");
 		}if  (random == 4) {
@@ -62,7 +63,7 @@ public static void main(String[] args) {
 			System.out.print("z");
 		}
 	numbercount++;
-		if(numbercount == 10) {
+		if(numbercount == 9) {
 			System.out.println();
 		numbercount = 0;
 		}
