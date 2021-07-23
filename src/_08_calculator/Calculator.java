@@ -21,9 +21,10 @@ public class Calculator implements ActionListener {
 	JButton subtract = new JButton();	
 	JButton multiply = new JButton();	
 	JButton divide = new JButton();	
-	JTextField input = new JTextField();
-	JTextField input2 = new JTextField();
-	
+	JTextField input = new JTextField(20);
+	JTextField input2 = new JTextField(20);
+	String num1;
+	String num2;
 	
 public void run() {
 	frame.add(panel);
@@ -47,22 +48,50 @@ public void run() {
 	panel.add(multiply);
 	panel.add(divide);
 	
+	
 	frame.pack();
 
 }
 public void add() {
 	System.out.println("ADDED");
+	num1 = input.getText();
+	num2 = input2.getText();
+	double addAnswer = Double.parseDouble(num1);
+	double addAnswer2 = Double.parseDouble(num2);
+	double addAnswerFinal = addAnswer+addAnswer2;
+	JOptionPane.showMessageDialog(null, "Answer is "+addAnswerFinal);
 }
 public void subtract() {
 	System.out.println("SUBTRACTED");
+	num1 = input.getText();
+	num2 = input2.getText();
+	double subAnswer = Double.parseDouble(num1);
+	double subAnswer2 = Double.parseDouble(num2);
+	double subAnswerFinal = subAnswer-subAnswer2;
+	JOptionPane.showMessageDialog(null, "Answer is "+subAnswerFinal);
 }
 public void multiply() {
 	System.out.println("MULTIPLIED");
-
+	num1 = input.getText();
+	num2 = input2.getText();
+	double multiplyAnswer = Double.parseDouble(num1);
+	double multiplyAnswer2 = Double.parseDouble(num2);
+	double multiplyAnswerFinal = multiplyAnswer*multiplyAnswer2;
+	JOptionPane.showMessageDialog(null, "Answer is "+multiplyAnswerFinal);
+	
 
 }
 public void divide() {
 	System.out.println("DIVIDED");
+	num1 = input.getText();
+	num2 = input2.getText();
+	double divAnswer = Double.parseDouble(num1);
+	double divAnswer2 = Double.parseDouble(num2);
+	double divAnswerFinal = divAnswer/divAnswer2;
+	JOptionPane.showMessageDialog(null, "Answer is "+divAnswerFinal);
+
+
+
 }
 @Override
 public void actionPerformed(ActionEvent e) {

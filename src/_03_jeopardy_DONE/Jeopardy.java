@@ -79,10 +79,14 @@ quizPanel.add(thirdButton);
 // 10. Add the secondButton to the quizPanel
 		quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
+		
+	
 		secondButton.addActionListener(this);
 		firstButton.addActionListener(this);
 	thirdButton.addActionListener(this);
-		// 12. Write the code to complete the actionPerformed() method below
+	
+	
+	// 12. Write the code to complete the actionPerformed() method below
 //FINALLY DONE
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
 		 
@@ -125,8 +129,9 @@ buttonCount++;
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
 	if(buttonPressed == firstButton) {
-		askQuestion("What is the fastest airplane?", "X-15", 500);
+		//askQuestion("What is the fastest airplane?", "X-15", 500);
 	firstButton.setText("");
+	playJeopardyTheme();
 	}
 	
 
@@ -136,12 +141,15 @@ buttonCount++;
 		// If the buttonPressed was the secondButton
 if(buttonPressed == secondButton) {
 			// Call the askQuestion() method with a harder question
-askQuestion("F4F Wilcat vs Mitsubishi A6M Zero, who would probably win?", "Zero", 400);
-		// Clear the text on the button that was pressed (set the button text to nothing)
+//askQuestion("F4F Wilcat vs Mitsubishi A6M Zero, who would probably win?", "Zero", 400);
+	playJeopardyTheme();
+	// Clear the text on the button that was pressed (set the button text to nothing)
 secondButton.setText("");
 }	
 	if(buttonPressed == thirdButton) {
-		askQuestion("Who is the F-16 made by?", "General Dynamics", 1000);
+		
+		playJeopardyTheme();
+		//askQuestion("Who is the F-16 made by?", "General Dynamics", 1000);
 	thirdButton.setText("");
 	}
 	
