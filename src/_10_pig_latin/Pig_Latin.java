@@ -1,4 +1,4 @@
-package _10_pig_latin;
+package _10_pig_latin_DONE;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -8,8 +8,8 @@ import javax.swing.*;
 public class Pig_Latin implements ActionListener {
 
 	PigLatinTranslator translator = new PigLatinTranslator();
-	
-	
+	String wordNew;
+	String word;
 	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
 	JButton button = new JButton();
@@ -31,8 +31,12 @@ public class Pig_Latin implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("Pressed");
-		
+		System.out.println("TRANSLATING...");
+		word = field.getText();
+	System.out.println(word);
+	
+	 wordNew = new PigLatinTranslator().translate(word);
+	field2.setText(wordNew);
 	}
 
 }
